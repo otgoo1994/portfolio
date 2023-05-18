@@ -269,11 +269,14 @@
 }
  .product .product-title {
 	 position: absolute;
-	 bottom: 30px;
 	 left: 50%;
 	 font-weight: 600;
 	 transform: translateX(-50%);
 	 color: #6b6b6b;
+}
+
+.product .product-title.bottom {
+	bottom: 30px;
 }
  .about-section {
 	 display: flex;
