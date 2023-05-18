@@ -22,7 +22,7 @@ const params = {
   moCircle      : [
     {x: 38, y: 45, scale: 3},
     {x: -20, y: 40, scale: 4},
-    {x: 70, y: 20, scale: 1},
+    {x: 70, y: 15, scale: 1},
     {x: 10, y: 40, scale: 3}
   ]
 }
