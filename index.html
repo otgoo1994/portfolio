@@ -1,0 +1,295 @@
+﻿<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/main.scss">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js" integrity="sha512-WFeBxQtM/n6U8/Nd0Hz/Hq7n75NImbzM7Kc0y/4kE0kHnH1Be+nzm32RwbGoDsW1D9fjjPvI8LIWxLrZhxew/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/index.js"></script>
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="main">
+    <div class="circle" id="circle"></div>
+    <div class="menu">
+      <div class="logo" id="logo" idx="0">
+        Oogii.
+      </div>
+      <div class="list">
+        <table>
+          <tr>
+            <td class="link"><p class="title">HOME</p></td>
+            <td class="link"><p class="title">ABOUT</p></td>
+            <!-- <td class="link"><p class="title">RESUME</p></td> -->
+            <td class="link"><p class="title">PRODUCT</p></td>
+            <td class="link"><p class="title">CONTACT</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="hamburger">
+        <svg id="hamburger" width="12%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <section class="home">
+      <div class="avatar panel">
+
+        <!-- <img src="./assets/image/portfolio.png" class="avt" alt=""> -->
+        <!-- <div class="circle"></div> -->
+
+        <div class="title">
+          <!-- <div class="txt">2023</div> -->
+          <!-- all you<br class="pc"> need<br class="mob"> is<br class="pc"> less. -->
+          <div class="txt">
+            <div class="line"></div>
+            <span class="title-child">PORTFOLIO</span><span class="about">BUILD YOUR WEBSITE. I WILL HELP YOU.</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <ul class="links">
+            <li class="logo">
+              <a href="https://www.facebook.com/profile.php?id=100011273706255" class="src" target="_blank"> 
+                <img class="image" src="./assets/image/facebook.png" class="src" alt="">
+              </a>
+            </li>
+            <li class="logo">
+              <a href="https://www.instagram.com/oldstyledn/" class="src" target="_blank">
+                <img class="image" src="./assets/image/instagram.png"alt="">
+              </a>
+            </li>
+            <li class="logo">
+              <a href="javascript:;" class="src" >
+                <img class="image" src="./assets/image/twitter.png" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="about-section">
+        <div class="panel about">
+          <div class="cont">
+            <img src="./assets/image/portfoliohalf.png" class="avt" alt="">
+          </div>
+        </div>
+        <div class="panel">
+          <div class="title topcenter">About me.</div>
+          <div class="description">
+            &nbsp;&nbsp;&nbsp;&nbsp;My name is Otgonbaatar, I am 28 years old. Currently in my fifth year in <span class="bold">software engineer</span>.<br>
+            <span class="bold">Epistemophile</span>, <span class="bold">passionate</span> and <span class="bold">professional</span>. My goal is to make my self useful in my own way, <br>through my passion in this world filled of problems to be solved.
+          </div>
+
+          <div class="title skill">Skills.</div>
+          <div class="skill-list">
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/javascript.png" alt="" class="img">
+              </div>
+              <div class="exp"> Javascript</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/vue.png" alt="" class="img">
+              </div>
+              <div class="exp"> Vue.js</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/nodejs.png" alt="" class="img">
+              </div>
+              <div class="exp"> Node.js</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/reactjs.png" alt="" class="img">
+              </div>
+              <div class="exp"> React.js</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/laravel.png" alt="" class="img">
+              </div>
+              <div class="exp"> Laravel</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/flutter.png" alt="" class="img">
+              </div>
+              <div class="exp"> Flutter</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/python.png" alt="" class="img">
+              </div>
+              <div class="exp"> Python</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/css.png" alt="" class="img">
+              </div>
+              <div class="exp"> CSS, SCSS</div>
+            </div>
+            <div class="column">
+              <div class="logo">
+                <img src="./assets/image/logo/mysql.png" alt="" class="img">
+              </div>
+              <div class="exp"> MySQL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section">
+      <div class="resume">
+        asdfasdf
+      </div>
+    </section> -->
+    <section class="section">
+      <div class="product"> 
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="number">01</div>
+                <img src="./assets/image/itwizard.png" class="image" alt="">
+              </div>
+              <div class="product-title">
+                <p class="pname">itwizard.mn</p>
+                <a href="http://itwizard.mn" target="_blank" class="type">WEB</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="number">02</div>
+                <img src="./assets/image/itlab.png" class="image" alt="">
+              </div>
+              <div class="product-title">
+                <p class="pname">itlab.mn</p>
+                <a href="https://itlab.mn" target="_blank" class="type">WEB</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="number">03</div>
+                <img src="./assets/image/ybm.png" class="image" alt="">
+              </div>
+              <div class="product-title">
+                <p class="pname">YBM 교과서</p>
+                <a href="https://wcontents.ybmcloud.com/pr/ybmmath/" target="_blank" class="type">WEB</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="number">04</div>
+                <img src="./assets/image/casamia.png" class="image" alt="">
+              </div>
+              <div class="product-title">
+                <p class="pname">Casamia</p>
+                <a href="https://www.casamia.co.kr/home" target="_blank" class="type">WEB</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="number">05</div>
+                <img src="./assets/image/hurdanhuruu.png" class="image" alt="">
+              </div>
+              <div class="product-title">
+                <p class="pname">hurdanhuruu.mn</p>
+                <a href="https://hurdanhuruu.mn" target="_blank" class="type">WEB</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-title">Developed projects</div>
+      </div>
+
+    </section>
+    <section class="section">
+      <div class="about-section">
+        <div class="panel">
+          <div class="cont">
+            <img src="./assets/image/portfoliohalf.png" class="avt" alt="">
+          </div>
+        </div>
+        <div class="panel">
+          <div class="title topcenter">Contact.</div>
+
+          <div class="contact">
+            <table class="links">
+              <tr>
+                <td>
+                  <div class="social-logo">
+                    <img class="image" src="./assets/image/facebook.png" alt="">
+                  </div>
+                </td>
+                <td class="data-text">
+                  <a class="link" href="https://www.facebook.com/profile.php?id=100011273706255" target="_blank"> Facebook: Оогий</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="social-logo">
+                    <img class="image" src="./assets/image/instagram.png" alt="">
+                  </div>
+                </td>
+                <td class="data-text">
+                  <a class="link" href="https://www.instagram.com/oldstyledn/" target="_blank"> Instagram: oldstyledn</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="social-logo">
+                    <img class="image" src="./assets/image/phone.png" alt="">
+                  </div>
+                </td>
+                <td class="data-text">
+                  <a class="link grey" href="javascript:;" target="_blank"> Phone: +976 9099 0918</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="social-logo">
+                    <img class="image" src="./assets/image/mail.png" alt="">
+                  </div>
+                </td>
+                <td class="data-text">
+                  <a class="link" href="javascript:;" target="_blank"> Mail: badarch.ogino@gmail.com</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="modal" id="modal">
+      <div class="modal-body">
+        <div class="close">
+          <img src="./assets/image/close.png" class="close-btn" alt="">
+        </div>
+
+        <div class="body">
+          <ul class="m-list">
+            <li class="list"><a href="javascript:;" class="title">HOME</a></li>
+            <li class="list"><a href="javascript:;" class="title">ABOUT</a></li>
+            <li class="list"><a href="javascript:;" class="title">PRODUCT</a></li>
+            <li class="list"><a href="javascript:;" class="title">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
