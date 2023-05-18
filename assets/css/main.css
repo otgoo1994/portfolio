@@ -437,7 +437,10 @@
 	 .about-section .panel .contact .data-text {
 		 font-size: 15px;
 	}
-	 .swiper .swiper-slide {
+	.swiper {
+		height: 60vh;
+ }
+	.swiper .swiper-slide {
 		 width: 80%;
 	}
 	 br.pc {
