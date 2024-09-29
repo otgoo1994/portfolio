@@ -1,4 +1,7 @@
-﻿
+﻿import CustomSwiper from "./lib/CustomSwiper.js";
+import CustomScroller from "./lib/Scroller.js";
+
+
 const el = {
   menu          : null,
   sections      : null,
@@ -9,6 +12,11 @@ const el = {
   closeBtn      : null,
   hamburger     : null,
   elMoLink      : null
+};
+
+const selector = {
+  swiper:       '.swiper',
+  scroller:     'section'
 };
 
 const params = {
@@ -59,8 +67,8 @@ const handler = {
     }
 
     if (!method.isMobile()) {
-      gsap.to(document.body, { duration: 1, scrollTo: {y: index * window.innerHeight}, ease: "power2" })
-      gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[index].x), y: (index*window.innerHeight)+(window.innerHeight/100*params.circle[index].y), scale: params.circle[index].scale});
+      gsap.to(document.body, { duration: 1, scrollTo: {y: index * window.innerHeight}, ease: "power2" });
+      // gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[index].x), y: (index*window.innerHeight)+(window.innerHeight/100*params.circle[index].y), scale: params.circle[index].scale});
       return;
     }
 
@@ -109,6 +117,14 @@ const bind = () => {
     element.addEventListener('click', handler.hrefLinkClick);
   });
 
+  document.querySelectorAll(selector.swiper).forEach(element => {
+    new CustomSwiper(element);
+  });
+
+  document.querySelectorAll(selector.scroller).forEach(element => {
+    new CustomScroller(element);
+  });
+
   el.sections.forEach((element, idx) => {
     ScrollTrigger.create({
       id: 'slide-scroll' + idx,
@@ -121,11 +137,11 @@ const bind = () => {
           return;
         }
         if (!method.isMobile()) {
-          gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.circle[idx].y), scale: params.circle[idx].scale});
+          // gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.circle[idx].y), scale: params.circle[idx].scale});
           return;
         }
 
-        gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.moCircle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.moCircle[idx].y), scale: params.moCircle[idx].scale});
+        // gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.moCircle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.moCircle[idx].y), scale: params.moCircle[idx].scale});
       },
       onEnterBack: () => {
         // !params.trigger ? gsap.to(document.body, { duration: 1, scrollTo: {y: idx * window.innerHeight}, ease: "power2" }) : null;
@@ -134,39 +150,16 @@ const bind = () => {
         }
 
         if (!method.isMobile()) {
-          gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.circle[idx].y), scale: params.circle[idx].scale});
+          // gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.circle[idx].y), scale: params.circle[idx].scale});
           return;
         }
-        gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.moCircle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.moCircle[idx].y), scale: params.moCircle[idx].scale});
+        // gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.moCircle[idx].x), y: (idx*window.innerHeight)+(window.innerHeight/100*params.moCircle[idx].y), scale: params.moCircle[idx].scale});
       }
     });
   });
 
-
-  el.swiper = new Swiper('.swiper', {
-    speed: 400,
-    loop: false,
-    spaceBetween: 10,
-    breakpoints: {
-      320: {
-        slidesPerView: 'auto',
-        spaceBetween: 10
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 10
-      },
-      640: {
-        slidesPerView: 5,
-        spaceBetween: 10
-      }
-    }
-  });
-
   el.closeBtn.addEventListener('click', handler.clickCloseBtn);
   el.hamburger.addEventListener('click', handler.clickHamburger);
-
-  if (!method.isMobile()) { document.body.style.overflow = 'hidden'; }
 }
 
 const contentReady = () => {
