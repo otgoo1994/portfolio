@@ -403,6 +403,10 @@
 	 display: none;
 }
  @media (max-width: 980px) {
+	body {
+		overflow: auto;
+		overflow-x: hidden;
+	}
 	 .about-section {
 		 flex-direction: column;
 		 height: 100%;
@@ -457,10 +461,14 @@
 		 display: block;
 	}
 	 .menu {
-		 width: 100vw;
+		 width: 90vw;
+		 left: 5vw;
+		 padding: 15px 0px;
+		 border-radius: 20px;
 	}
 	 .menu .logo {
 		 width: 50%;
+		 font-size: 20px;
 	}
 	 .menu .list {
 		 display: none;

@@ -1,7 +1,6 @@
 ﻿import CustomSwiper from "./lib/CustomSwiper.js";
 import CustomScroller from "./lib/Scroller.js";
 
-
 const el = {
   menu          : null,
   sections      : null,
@@ -65,7 +64,7 @@ const handler = {
       el.modal.style.display = 'none';
       if (method.isMobile()) { document.body.style.overflow = 'auto'; }
     }
-
+    
     if (!method.isMobile()) {
       gsap.to(document.body, { duration: 1, scrollTo: {y: index * window.innerHeight}, ease: "power2" });
       // gsap.to(el.circle, { duration: 0.7, x: (window.innerWidth/100*params.circle[index].x), y: (index*window.innerHeight)+(window.innerHeight/100*params.circle[index].y), scale: params.circle[index].scale});
